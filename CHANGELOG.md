@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.3.0] — Generation & API
+
+### Added
+- Grounded answer generation with numbered sources and citation validation
+- Abstention when the sources don't contain the answer
+- Token usage and cost tracking across reranking and generation
+- RAG pipeline orchestrating ingestion and querying
+- FastAPI service: upload, URL ingestion, list, delete, query, health
+- Dockerfile and Docker Compose stack with pgvector
+
 ## [0.2.0] — Retrieval
 
 ### Added

@@ -86,3 +86,30 @@ class FailingLLM:
 
 def json_scores(scores: dict[int, float]) -> str:
     return json.dumps({"scores": [{"id": k, "score": v} for k, v in scores.items()]})
+
+
+# --- Pipeline -----------------------------------------------------------------------------------
+
+from production_rag.generation.answer import AnswerGenerator  # noqa: E402
+from production_rag.pipeline import RAGPipeline  # noqa: E402
+from production_rag.retrieval.hybrid import Retriever  # noqa: E402
+
+
+@pytest.fixture
+def make_pipeline(store: InMemoryStore, embedder: HashingEmbedder) -> Callable[..., RAGPipeline]:
+    def factory(llm: FakeLLM | None = None, *, ingest: bool = True) -> RAGPipeline:
+        pipeline = RAGPipeline(
+            store=store,
+            embedder=embedder,
+            retriever=Retriever(store, embedder, mode="hybrid", candidate_k=10),
+            generator=AnswerGenerator(llm or FakeLLM()),
+            chunk_size=300,
+            chunk_overlap=40,
+            default_top_k=3,
+        )
+        if ingest:
+            for name, text in CORPUS.items():
+                pipeline.ingest(load_text(text, source=name), {"department": department_for(name)})
+        return pipeline
+
+    return factory
