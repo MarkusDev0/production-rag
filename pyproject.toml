@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "production-rag"
-version = "0.3.0"
+version = "0.4.0"
 description = "Retrieval-augmented generation service with hybrid search, reranking, grounded citations and an evaluation harness."
 readme = "README.md"
 license = "MIT"

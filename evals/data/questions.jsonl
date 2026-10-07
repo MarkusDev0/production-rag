@@ -1,0 +1,24 @@
+{"id": "q01", "question": "What is the daily meal allowance when travelling for work?", "evidence": "65 EUR per day", "answer_keywords": ["65"]}
+{"id": "q02", "question": "Can I get reimbursed for alcohol?", "evidence": "Alcohol is not reimbursable", "answer_keywords": ["not"]}
+{"id": "q03", "question": "How long do I have to submit an expense claim?", "evidence": "within 30 days of the purchase date", "answer_keywords": ["30"]}
+{"id": "q04", "question": "When can employees fly business class?", "evidence": "flights longer than six hours", "answer_keywords": ["six hours"]}
+{"id": "q05", "question": "How much home office equipment can I expense each year?", "evidence": "up to 400 EUR per calendar year", "answer_keywords": ["400"]}
+{"id": "q06", "question": "How quickly must I report a stolen laptop?", "evidence": "within 1 hour", "answer_keywords": ["1 hour"]}
+{"id": "q07", "question": "What is the minimum password length?", "evidence": "at least 14 characters", "answer_keywords": ["14"]}
+{"id": "q08", "question": "How is customer shipment data classified?", "evidence": "Customer shipment records are classified as Confidential", "answer_keywords": ["confidential"]}
+{"id": "q09", "question": "How often are production access rights reviewed?", "evidence": "reviewed every quarter", "answer_keywords": ["quarter"]}
+{"id": "q10", "question": "What happens if an express delivery is late?", "evidence": "50 percent of the shipping fee", "answer_keywords": ["50"]}
+{"id": "q11", "question": "Which cities offer same-day courier service?", "evidence": "Hamburg, Rotterdam and Antwerp", "answer_keywords": ["hamburg", "rotterdam", "antwerp"]}
+{"id": "q12", "question": "What is the maximum weight for a standard parcel?", "evidence": "up to 31.5 kg", "answer_keywords": ["31.5"]}
+{"id": "q13", "question": "How often is tracking information updated during transit?", "evidence": "at least every 4 hours", "answer_keywords": ["4 hours"]}
+{"id": "q14", "question": "Is there a fee for cancelling after the shipment was picked up?", "evidence": "cancellation fee of 25 EUR", "answer_keywords": ["25"]}
+{"id": "q15", "question": "How long do I have to report damaged goods?", "evidence": "within 14 days of delivery", "answer_keywords": ["14 days"]}
+{"id": "q16", "question": "How much does basic insurance cover?", "evidence": "up to 500 EUR per shipment", "answer_keywords": ["500"]}
+{"id": "q17", "question": "How many days per week can I work from home?", "evidence": "up to 3 days per week", "answer_keywords": ["3 days"]}
+{"id": "q18", "question": "What are the core hours for remote employees?", "evidence": "between 10:00 and 15:00 CET", "answer_keywords": ["10:00", "15:00"]}
+{"id": "q19", "question": "How many days a year can I work from another country?", "evidence": "up to 20 working days per calendar year", "answer_keywords": ["20"]}
+{"id": "q20", "question": "When must the security awareness training be finished by new hires?", "evidence": "within the first 5 working days", "answer_keywords": ["5"]}
+{"id": "q21", "question": "When are probation reviews held?", "evidence": "end of month 3 and again at the end of month 6", "answer_keywords": ["3", "6"]}
+{"id": "q22", "question": "What is the parental leave policy?", "evidence": null, "answer_keywords": []}
+{"id": "q23", "question": "Which health insurance provider does the company use?", "evidence": null, "answer_keywords": []}
+{"id": "q24", "question": "How many vacation days do employees get?", "evidence": null, "answer_keywords": []}
