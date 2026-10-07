@@ -51,3 +51,38 @@ def seeded_store(store: InMemoryStore, embedder: HashingEmbedder) -> InMemorySto
         )
         store.upsert(doc, chunks, embedder.embed([c.text for c in chunks]))
     return store
+
+
+# --- LLM test doubles -------------------------------------------------------------------------
+
+import json  # noqa: E402
+from collections.abc import Callable  # noqa: E402
+
+from production_rag.generation.llm import LLMResponse  # noqa: E402
+
+
+class FakeLLM:
+    """Records calls and answers with a scripted responder."""
+
+    def __init__(self, responder: Callable[[str, str], str] | str = "Answer [1].") -> None:
+        self.model = "fake"
+        self.responder = responder
+        self.calls: list[tuple[str, str]] = []
+
+    def complete(
+        self, system: str, prompt: str, *, max_tokens: int = 1024, json_mode: bool = False
+    ) -> LLMResponse:
+        self.calls.append((system, prompt))
+        text = self.responder if isinstance(self.responder, str) else self.responder(system, prompt)
+        return LLMResponse(text=text, input_tokens=100, output_tokens=20, model=self.model)
+
+
+class FailingLLM:
+    model = "failing"
+
+    def complete(self, *args: object, **kwargs: object) -> LLMResponse:
+        raise RuntimeError("provider unavailable")
+
+
+def json_scores(scores: dict[int, float]) -> str:
+    return json.dumps({"scores": [{"id": k, "score": v} for k, v in scores.items()]})
