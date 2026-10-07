@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] — Retrieval
+
+### Added
+- PostgreSQL + pgvector store with HNSW, full-text GIN and JSONB metadata indexes
+- Provider-agnostic LLM client for OpenAI and Anthropic
+- Hybrid retrieval with Reciprocal Rank Fusion
+- LLM reranker with fallback to retrieval order
+
 ## [0.1.0] — Foundation & ingestion
 
 ### Added
