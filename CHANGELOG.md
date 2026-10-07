@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.4.0] — Evaluation & hardening
+
+### Added
+- Evaluation harness with hit@k, MRR@k, answer accuracy, grounded citation rate and abstention metrics
+- Evaluation corpus (6 policy documents) and 24 labeled questions, including 3 unanswerable ones
+- CI workflow: lint, strict type checking, unit + Postgres integration tests on Python 3.11 and 3.12, retrieval quality gate, Docker build
+- Architecture guide and full README
+
 ## [0.3.0] — Generation & API
 
 ### Added
